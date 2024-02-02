@@ -133,7 +133,6 @@ const Sidebar = () => {
 
                             <li className="nav-item">
                                 <ul>
-                                 
                                     <li className="nav-item">
                                         <Link href="/apps/templates/create" className="group">
                                             <div className="flex items-center">
@@ -167,7 +166,7 @@ const Sidebar = () => {
                                         </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link href="/apps/scrumboard" className="group">
+                                        <Link href="/apps/integrations/integration" className="group">
                                             <div className="flex items-center">
                                                 <svg className="group-hover:!text-primary shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path
@@ -186,7 +185,7 @@ const Sidebar = () => {
                                                         fill="currentColor"
                                                     />
                                                 </svg>
-                                                <span className="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">{t('scrumboard')}</span>
+                                                <span className="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">{t('Integrations')}</span>
                                             </div>
                                         </Link>
                                     </li>
