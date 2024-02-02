@@ -25,7 +25,7 @@ export default function Integrations() {
             </div>
             <div className={`flex flex-row mx-auto py-8`}>
                 <Tabs defaultValue="profile-1" className="flex gap-16 h-full justify-between items-center">
-                    <TabsList className="h-full self-baseline flex flex-col gap-4 px-2 py-2 mt-2">
+                    <TabsList className="h-full self-baseline flex flex-col gap-4 px-2 py-2 ">
                         <TabsTrigger value="profile-1">
                             <ProfileCard name="Himanshu Borah" id="321562151" />
                         </TabsTrigger>
@@ -40,19 +40,19 @@ export default function Integrations() {
                         </TabsTrigger>
                     </TabsList>
 
-                    <div className="relative rounded-lg  w-[60rem] h-[70vh]">
-                        <TabsContent value="profile-1" className="flex-grow h-full  border-gray-500/20 border rounded-lg" id="page_id_1">
+                    <div className="relative rounded-lg  w-[60rem] h-[80vh]">
+                        <TabsContent value="profile-1" className="flex-grow  border-gray-500/20 border rounded-lg" id="page_id_1">
                             <div className=" flex flex-col z-10">
-                                <div className="flex-1 flex-grow overflow-hidden transition-all duration-1000 ease-in-out">
+                                <div className="flex-1 flex-grow overflow-hidden transition-transform duration-700 ease-in-out ">
                                     {showNewLeadForm && (
                                         <LeadForm
-                                            className="transition-all duration-1000 ease-in-out z-10" // Ensure form is above table
+                                            className="transition-transform duration-1000 ease-in-out z-10" // Ensure form is above table
                                             onSubmit={handleNewLeadFormSubmit}
                                         />
                                     )}
 
                                     {/* <LeadTable className="flex-2 transition-all duration-500 ease-in-out" /> */}
-                                    <LeadTable className={`absolute inset-0 w-full ${showNewLeadForm ? 'h-30' : 'h-full'} transition-all duration-500 ease-in-out`} />
+                                    <LeadTable className={`absolute inset-0 w-full ${showNewLeadForm ? 'h-30' : 'h-full'} transition-transform duration-1000 ease-in-out`} />
                                 </div>
                                 {/* {showNewLeadForm && <NewLeadForm className=" absolute top-60 left-0 w-full h-80  z-20" onSubmit={handleNewLeadFormSubmit} />}
                                 <LeadTable /> */}

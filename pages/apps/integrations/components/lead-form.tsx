@@ -1,12 +1,14 @@
 import { Button } from './ui/button';
 import { SelectValue, SelectTrigger, SelectItem, SelectContent, Select } from './ui/select';
 
-export default function LeadForm({ onSubmit }) {
+export default function LeadForm({ onSubmit, className }) {
     return (
-        <div className="max-w-4xl mx-auto p-4 mb-6  border-b-gray-500/50 shadow-md">
+        <div className={`${className} max-w-4xl mx-auto p-4 mb-6  border-b-gray-500/50 shadow-md`}>
             <div className="flex justify-between items-center mb-4">
                 <h1 className="text-xl font-semibold">Select FB Page</h1>
-                <Button variant="outline" onClick={onSubmit}>Cancel</Button>
+                <Button variant="outline" onClick={onSubmit}>
+                    Cancel
+                </Button>
             </div>
             <Select>
                 <SelectTrigger id="fb-page">
