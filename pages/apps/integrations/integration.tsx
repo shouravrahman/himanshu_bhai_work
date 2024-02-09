@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import LeadTable from './components/lead-table';
 import LeadForm from './components/lead-form';
+import FormTable from './components/form-table';
 
 export default function Integrations() {
     const [showNewLeadForm, setShowNewLeadForm] = useState(false);
@@ -27,16 +28,16 @@ export default function Integrations() {
                 <Tabs defaultValue="profile-1" className="flex gap-16 h-full justify-between items-center">
                     <TabsList className="h-full self-baseline flex flex-col gap-4 px-2 py-2 ">
                         <TabsTrigger value="profile-1">
-                            <ProfileCard name="Himanshu Borah" id="321562151" />
+                            <ProfileCard name="Page 1" id="321562151" />
                         </TabsTrigger>
                         <TabsTrigger value="profile-2">
-                            <ProfileCard name="Himanshu Borah" id="555244151" />
+                            <ProfileCard name="page 2" id="555244151" />
                         </TabsTrigger>
                         <TabsTrigger value="profile-3">
-                            <ProfileCard name="Himanshu Borah" id="799962151" />
+                            <ProfileCard name="page 3" id="799962151" />
                         </TabsTrigger>
                         <TabsTrigger value="profile-4">
-                            <ProfileCard name="Himanshu Borah" id="567562151" />
+                            <ProfileCard name="page 4" id="567562151" />
                         </TabsTrigger>
                     </TabsList>
 
@@ -53,6 +54,8 @@ export default function Integrations() {
 
                                     {/* <LeadTable className="flex-2 transition-all duration-500 ease-in-out" /> */}
                                     <LeadTable className={`absolute inset-0 w-full ${showNewLeadForm ? 'h-30' : 'h-full'} transition-transform duration-1000 ease-in-out`} />
+                                    <br />
+                                    <FormTable />
                                 </div>
                                 {/* {showNewLeadForm && <NewLeadForm className=" absolute top-60 left-0 w-full h-80  z-20" onSubmit={handleNewLeadFormSubmit} />}
                                 <LeadTable /> */}
@@ -81,41 +84,21 @@ function UserIcon() {
 
 function ProfileCard({ name, id }: { name: string; id: string }) {
     return (
-        <Link className="flex items-center space-x-2 gap-3 text-left" href="#">
-            <UserIcon />
-            <div>
-                <h2 className="text-lg font-semibold mt-1">{name}</h2>
-                <p className="text-sm text-gray-500">#{id}</p>
+        // <Link className="flex items-center space-x-2 gap-3 text-left" href="#">
+        //     <UserIcon />
+        //     <div>
+        //         <h2 className="text-lg font-semibold mt-1">{name}</h2>
+        //         <p className="text-sm text-gray-500">#{id}</p>
+        //     </div>
+        // </Link>
+        <div className="py-2 px-4 shadow-sm max-w-sm mx-auto  rounded-xl  space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+            <img className="block mx-auto h-10 rounded-full sm:mx-0 sm:shrink-0" src="https://tailwindcss.com/img/erin-lindford.jpg" alt="Woman's Face" />
+            <div className="text-center space-y-2 sm:text-left">
+                <div className="space-y-0.5">
+                    <p className="text-lg text-black font-semibold dark:text-white">{name}</p>
+                    <p className="text-slate-500 font-medium dark:text-white/50 ">#{id}</p>
+                </div>
             </div>
-        </Link>
+        </div>
     );
 }
-
-// function NewLeadForm({ className }: { className: string }, onSubmit: () => void) {
-//     return (
-//         <form className={`p-6 w-2/3 space-y-6 ${className}`}>
-//             <div className="flex flex-col  gap-6">
-//                 <select className="form-select my-4 text-white-dark border-gray-500/40">
-//                     <option>Open this select menu</option>
-//                     <option>One</option>
-//                     <option>Two</option>
-//                     <option>Three</option>
-//                 </select>
-//                 <select className="form-select mb-4 text-white-dark border-gray-500/40">
-//                     <option>Open this select menu</option>
-//                     <option>One</option>
-//                     <option>Two</option>
-//                     <option>Three</option>
-//                 </select>
-//                 <select className="form-select text-white-dark border-gray-500/40">
-//                     <option>Open this select menu</option>
-//                     <option>One</option>
-//                     <option>Two</option>
-//                     <option>Three</option>
-//                 </select>
-//             </div>
-
-//             <Button type="submit">Submit</Button>
-//         </form>
-//     );
-// }

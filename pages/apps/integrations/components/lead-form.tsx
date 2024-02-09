@@ -5,35 +5,30 @@ export default function LeadForm({ onSubmit, className }) {
     return (
         <div className={`${className} max-w-4xl mx-auto p-4 mb-6  border-b-gray-500/50 shadow-md`}>
             <div className="flex justify-between items-center mb-4">
-                <h1 className="text-xl font-semibold">Select FB Page</h1>
+                <h1 className="text-xl font-semibold mt-8">Create New Lead Form</h1>
                 <Button variant="outline" onClick={onSubmit}>
                     Cancel
                 </Button>
             </div>
-            <Select>
-                <SelectTrigger id="fb-page">
-                    <SelectValue placeholder="Telecrm - India's Best and Simplest Tele-Sales CRM Software" />
-                </SelectTrigger>
-                <SelectContent position="popper">
-                    <SelectItem value="telecrm">Telecrm - India's Best and Simplest Tele-Sales CRM Software</SelectItem>
-                </SelectContent>
-            </Select>
-            <div className="mt-4">
-                <h2 className="text-lg font-semibold mb-2">Select Lead Forms</h2>
+
+            <div className="mt-8">
+                <h2 className="text-lg font-semibold mb-6">Select Lead Forms:</h2>
                 <Select>
                     <SelectTrigger id="lead-form">
                         <SelectValue placeholder="Tele-CRM Social Media CRM" />
                     </SelectTrigger>
                     <SelectContent position="popper">
                         <SelectItem value="social-media-crm">Tele-CRM Social Media CRM</SelectItem>
+                        <SelectItem value="social-media-crm">My page</SelectItem>
+                        <SelectItem value="social-media-crm">My Page 2</SelectItem>
                     </SelectContent>
                 </Select>
             </div>
-            <div className="mt-4">
-                <h2 className="text-lg font-semibold mb-2">Map Your Data</h2>
-                <h3 className="text-md font-semibold mb-1">FB Form Question</h3>
+            <div className="mt-10">
+                <h2 className="text-lg font-semibold  mb-6">Map Your Data:</h2>
+                {/* <h3 className="text-md font-semibold mb-1">FB Form Question</h3> */}
                 <div className="flex items-center justify-between mb-2">
-                    <p className="text-md">Full name</p>
+                    <p className="text-md font-semibold ">Full name</p>
                     <div className="flex items-center">
                         <PhoneCallIcon className="text-blue-500 mr-2" />
                         <Select>
@@ -42,12 +37,14 @@ export default function LeadForm({ onSubmit, className }) {
                             </SelectTrigger>
                             <SelectContent position="popper">
                                 <SelectItem value="tname">TName</SelectItem>
+                                <SelectItem value="tname">TName</SelectItem>
+                                <SelectItem value="tname">TName</SelectItem>
                             </SelectContent>
                         </Select>
                     </div>
                 </div>
                 <div className="flex items-center justify-between mb-2">
-                    <p className="text-md">Phone number</p>
+                    <p className="text-md font-semibold">Phone number</p>
                     <div className="flex items-center">
                         <PhoneCallIcon className="text-blue-500 mr-2" />
                         <Select>
@@ -56,12 +53,14 @@ export default function LeadForm({ onSubmit, className }) {
                             </SelectTrigger>
                             <SelectContent position="popper">
                                 <SelectItem value="tphone">TPhone</SelectItem>
+                                <SelectItem value="tphone">TPhone</SelectItem>
+                                <SelectItem value="tphone">TPhone</SelectItem>
                             </SelectContent>
                         </Select>
                     </div>
                 </div>
             </div>
-            <Button className="mt-2 bg-black dark:bg-white" onClick={onSubmit}>
+            <Button className="my-8 bg-black dark:bg-white " onClick={onSubmit}>
                 Submit
             </Button>
         </div>

@@ -23,8 +23,7 @@ const leads = [
 
 export default function LeadTable({ className }: { className: string }) {
     return (
-        <Table className={`p-4 w-full h-full`}>
-            <TableCaption>Recent leads from social media</TableCaption>
+        <Table className={`p-4 w-full h-full `}>
             <TableHeader className="bg-black dark:bg-inherit">
                 <TableRow>
                     <TableHead className="w-[100px]">Platform</TableHead>
